@@ -17,12 +17,10 @@ const PanaMiguel = new Personaje("El Pana Miguel", "De pie, el Pana Miguel", "..
 const DarkCheems = new Personaje("Dark Cheems", "El perrito con amsiedad se puso oscuro", "../assets/dark_cheems_alive.png", "../assets/dark_cheems_dead.png", 120, 120, 40, 35, 0)
 const SinkoPeso = new Personaje("Sinko Peso", "Vende plei chipeado sinko peso", "../assets/sinko_peso_alive.png", "../assets/sinko_peso_dead.png", 201, 201, 45, 46, 0)
 const Cheems = new Personaje("Cheems", "El perrito con amsiedad más fuerte de todos", "../assets/cheems_alive.png", "../assets/cheems_dead.png", 420, 420, 69, 69, 0)
-const Prota = new Personaje("Cheems Samurai", "", "../assets/Cheems_samurai_alive", "../assets/Cheems_samurai_dead", 50, 50, 1, 1, 5);
+const Prota = new Personaje("Cheems Samurai", "El pequeño Cheems samurai se tendrá que enfrentar contra el mundo y la ansiedad", "../assets/Cheems_samurai_alive", "../assets/Cheems_samurai_dead", 50, 50, 1, 1, 5);
 const enemigos = [
     LongCat, Doge, PanaMiguel, DarkCheems, SinkoPeso, Cheems
 ]
-
-
 
 
 const cosa = document.getElementById("enemigos")
