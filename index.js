@@ -22,6 +22,7 @@ const enemigos = [
     LongCat, Doge, PanaMiguel, DarkCheems, SinkoPeso, Cheems
 ]
 
+const name = new File(arguments);
 
 const cosa = document.getElementById("enemigos")
 enemigos.forEach((element) => {
