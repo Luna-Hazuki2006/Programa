@@ -1,3 +1,52 @@
 [
-    
+    {
+        "nombre": "Long Cat", 
+        "descripcion": "es muuuy largo", 
+        "imagen": "../assets/longcat_alive.png", 
+        "memorial": "../longcat_dead.png", 
+        "salud": 50, 
+        "saludMax": 50,
+        "ataque": 7,
+        "defensa": 7,
+        "monedas": 0
+    },
+    {
+        "nombre": "Doge",
+        "descripcion": "Wow perro, mucho feliz, tanto mover colita.",
+        "imagen": "../assets/doge_alive.png",
+        "memorial": "../assets/doge_dead.png",
+        "salud": 81,
+        "saludMax": 81,
+        "ataque": 15,
+        "defensa": 14,
+        "monedas": 0
+    },
+    {
+        "nombre": "El Pana Miguel",
+        "descripcion": "De pie, el Pana Miguel",
+        "imagen": "../assets/pana_miguel_alive.png",
+        "memorial": "../assets/pana_miguel_dead.png",
+        "salud": 105,
+        "saludMax": 105,
+        "ataque": 21,
+        "defensa": 32,
+        "monedas": 0
+    },
+    {
+        "nombre": "Dark Cheems",
+        "descripcion": "El perrito con amsiedad se puso oscuro",
+        "imagen": "../assets/dark_cheems_alive.png",
+        "memorial": "../assets/dark_cheems_dead.png",
+        "salud": 120,
+        "saludMax": 120,
+        "ataque": 40,
+        "defensa": 35,
+        "monedas": 0
+    }, 
+    {
+        
+    }, 
+    {
+
+    }
 ]
