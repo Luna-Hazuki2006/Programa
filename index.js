@@ -26,13 +26,13 @@ const enemigos = [
 
 // para la lista de enemigos
 
-const cosa = document.getElementById("enemigos")
-enemigos?.forEach((element) => {
+let cosa = document.getElementById("enemigos")
+enemigos.forEach((element) => {
     cosa.innerHTML += `
     <div>
         <h1>${element.nombre}</h1>
         <progress class="nes-progress is-primary" value="${element.salud}" max="${element.saludMax}"></progress>
-        <img class="enemigos" src="${(element.salud > 0) ? element.imagen : element.memorial}" alt="Enemigo">
+        <img class="imagenes" src="${(element.salud > 0) ? element.imagen : element.memorial}" alt="Enemigo">
         <p>Vida Máxima: ${element.saludMax}</p>
         <p>Ataque: ${element.ataque}</p>
         <p>Defensa: ${element.defensa}</p>
@@ -41,25 +41,3 @@ enemigos?.forEach((element) => {
     </div>
 `
 })
-
-// para objetos
-
-async function getJSON(path, callback) {
-    return callback(await fetch(path).then(r => r.json()));
-}
-
-console.log(getJSON('Objetos.json', info => console.log(info.title)))
-/*
-const objetos = document.getElementById("objetos")
-objetos?.forEach((element) => {
-    objetos.innerHTML += `
-    <div>
-        <h1>${element}</h1>
-        <img src="" alt="">
-        <p></p>
-        <p></p>
-        <p></p>
-        <button></button>
-    </div>
-    `
-});*/

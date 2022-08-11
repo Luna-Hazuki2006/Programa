@@ -1,28 +1,28 @@
 [
     {
         "nombre": "Plei chipeado", 
-        "imagen": "assets/ps2-chip2.jpg",
+        "imagen": "../assets/ps2-chip2.jpg",
         "cantidad": 2, 
         "mejora": ["ataque"], 
         "dinero": 5
     }, 
     {
         "nombre": "Te de limón pero es de Jamaica pero sabe a tamarindo", 
-        "imagen": "assets/tamarindo.jpg",
+        "imagen": "../assets/tamarindo.jpg",
         "cantidad": 2, 
         "mejora": ["defensa"], 
         "dinero": 5
     }, 
     {
         "nombre": "Muñeco de cartón de Bad Bunny", 
-        "imagen": "assets/conejo-malo-carton.jpg",
+        "imagen": "../assets/conejo-malo-carton.jpg",
         "cantidad": 10, 
         "mejora": ["saludMax"], 
         "dinero": 10
     }, 
     {
         "nombre": "Suculenta", 
-        "imagen": "assets/suculenta.jpg",
+        "imagen": "../assets/suculenta.jpg",
         "cantidad": 10, 
         "mejora": ["ataque", "defensa", "saludMax"], 
         "dinero": 50
