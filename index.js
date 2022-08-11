@@ -62,9 +62,9 @@ if (!localStorage.getItem("Dias")) {
         localStorage.setItem("Dias", JSON.stringify(info[0]))
     })
 } else {
-    const dia = localStorage.getItem("Dias")
-    dia.dia += 1
-    localStorage.setItem("Dias", JSON.stringify(dia))
+    const dias = JSON.parse(localStorage.getItem("Dias"))
+    dias.dia += 1
+    localStorage.setItem("Dias", JSON.stringify(dias))
 }
 
 const estat = document.getElementById("stat")
