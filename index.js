@@ -57,6 +57,16 @@ if (vida <= 0) {
     visible.style.display = "none"
 }
 
+if (!localStorage.getItem("Dias")) {
+    getJSON("Dias.json").then(info => {
+        localStorage.setItem("Dias", JSON.stringify(info[0]))
+    })
+} else {
+    const dia = localStorage.getItem("Dias")
+    dia.dia += 1
+    localStorage.setItem("Dias", JSON.stringify(dia))
+}
+
 const estat = document.getElementById("stat")
 estat.innerHTML = `
     <progress class="nes-progress is-primary" value="${prota.salud}" max="${prota.saludMax}"></progress>
