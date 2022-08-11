@@ -24,6 +24,8 @@ const enemigos = [
 
 // const name = new File(arguments);
 
+// para la lista de enemigos
+
 const cosa = document.getElementById("enemigos")
 enemigos?.forEach((element) => {
     cosa.innerHTML += `
@@ -40,3 +42,24 @@ enemigos?.forEach((element) => {
 `
 })
 
+// para objetos
+
+async function getJSON(path, callback) {
+    return callback(await fetch(path).then(r => r.json()));
+}
+
+console.log(getJSON('Objetos.json', info => console.log(info.title)))
+/*
+const objetos = document.getElementById("objetos")
+objetos?.forEach((element) => {
+    objetos.innerHTML += `
+    <div>
+        <h1>${element}</h1>
+        <img src="" alt="">
+        <p></p>
+        <p></p>
+        <p></p>
+        <button></button>
+    </div>
+    `
+});*/
