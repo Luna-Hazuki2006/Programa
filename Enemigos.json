@@ -44,9 +44,25 @@
         "monedas": 0
     }, 
     {
-        
+        "nombre": "Sinko Peso", 
+        "descripcion": "Vende plei chipeado sinko peso",
+        "imagen": "../assets/sinko_peso_alive.png",
+        "memorial": "../assets/sinko_peso_dead.png",
+        "salud": 201,
+        "saludMax": 201,
+        "ataque": 45,
+        "defensa": 46,
+        "monedas": 0
     }, 
     {
-
+        "nombre": "Cheems",
+        "descripcion": "El perrito con amsiedad más fuerte de todos",
+        "imagen": "../assets/cheems_alive.png",
+        "memorial": "../assets/cheems_dead.png",
+        "salud": 420,
+        "saludMax": 420,
+        "ataque": 69,
+        "defensa": 69,
+        "monedas": 0
     }
 ]
