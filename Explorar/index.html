@@ -9,6 +9,7 @@
     <!-- minify -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Explorar</title>
 </head>
 <body class="inicio">
@@ -20,14 +21,8 @@
         </a>
     </header>
     <main>
-        <section class="nes-container with-title">
+        <section id="stat" class="nes-container with-title">
             <h3 class="title">Estadísticas de Cheems samurai</h3>
-            <progress class="nes-progress is-primary" value="${prota.salud}" max="${prota.saludMax}"></progress>
-            <p>Salud: </p>
-            <p>Salud máxima: </p>
-            <p>Ataque: </p>
-            <p>Defensa: </p>
-            <p>DogeCoins: </p>
         </section><br>
         <section class="nes-container with-title" style="display: grid; grid-template-rows: 2; gap: 40px;">
             <h3 class="title">Aquí están los tickets de la suerte :D</h3>

@@ -1,6 +1,5 @@
 [
     {
-        "id": 0,
         "nombre": "Long Cat", 
         "descripcion": "es muuuy largo", 
         "imagen": "../assets/longcat_alive.png", 
