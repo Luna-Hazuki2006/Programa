@@ -2,18 +2,20 @@ const suerte = document.getElementById("suerte")
 suerte?.addEventListener("click", () => {
     let protagonista = JSON.parse(localStorage.getItem("Protagonista"))
     let defensa = Math.floor((Math.random() * 5) + 1)
+    let saludMax = Math.floor((Math.random() * 5) + 1)
     let salud = Math.floor((Math.random() * 5) + 1)
-    let saludMax = Math.floor((Math.random() * 10) + 1)
+    let pro = Math.floor((Math.random() * 10) + 1)
 
     Swal.fire(
         '¡Entrenamiento exitoso :D!',
         `Ganaste ${(defensa > 1) ? defensa + " puntos " : defensa + "punto "} de defensa :D, 
-        pero perdiste ${salud} de salud D:`,
+        pero perdiste ${salud} de salud D: 
+        ${(pro == 10) ? " pero, con " + saludMax + " de salud máxima :D" : ""}`,
         'success'
     )
     protagonista.salud -= salud
     protagonista.defensa += defensa
-    protagonista.saludMax += saludMax
+    if (pro == 10) protagonista.saludMax += saludMax; else console.log("Ay no pos que mala suerte D:");
     localStorage.setItem("Protagonista", JSON.stringify(protagonista))
     const estat = document.getElementById("stat")
     estat.innerHTML = `
