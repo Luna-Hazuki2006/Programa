@@ -1,8 +1,8 @@
 // return json data from any file path (asynchronous)... why did I write this in english?
-async function getJSON(path) {
-    const response = await fetch(path)
-    return await response.json()
-}
+// async function getJSON(path) {
+//     const response = await fetch(path)
+//     return await response.json()
+// }
 const objetos = document.getElementById("objetos")
 const monedas = document.getElementById("DogeCoins")
 const ataque = document.getElementById("Ataque")
@@ -10,41 +10,69 @@ const defensa = document.getElementById("Defensa")
 const salud = document.getElementById("Salud")
 let lista = []
 
-const protagonista = () => getJSON("../Protagonista.json").then(info => {
-    lista = info
-    console.log(lista);
-    lista?.forEach((element) => {
-        // let a = JSON.stringify(element)
-        // console.log("esto es a: " + a);
-        // let b = JSON.parse(a)
-        // console.log(b.dinero);
-        monedas.textContent = `Cheems Samurai DogeCoins: ${element.monedas}`
-        ataque.textContent = `Estadísticas de ataque: ${element.ataque}`
-        defensa.textContent = `Estadística de defensa: ${element.defensa}`
-        salud.textContent = `Estadística de salud máxima: ${element.saludMax}`
-    })
-})
-
-const comprar = (id) => {
-    getJSON("../Objetos.json").then(info => {
-        let el 
-        info.forEach((element) => {
-            if (element.id == id) {
-                el = element
-            }
-        })
-        if (confirm(`¿Está seguro que quiere comprar esta ${el.nombre} por ${el.dinero} DogeCoins?`)) {
-            localStorage.setItem("Protagonista", )        
-        }
-    })
+const Guardar = () => {
+    let protagonista = JSON.parse(localStorage.getItem("Protagonista"))
+    monedas.textContent = `Cheems Samurai DogeCoins: ${protagonista.monedas}`
+    ataque.textContent = `Estadísticas de ataque: ${protagonista.ataque}`
+    defensa.textContent = `Estadística de defensa: ${protagonista.defensa}`
+    salud.textContent = `Estadística de salud máxima: ${protagonista.saludMax}`
 }
+Guardar()
+const comprar = (id) => {
+    // getJSON("../Objetos.json").then(info => {
+    //     let el 
+    //     info.forEach((element) => {
+    //         if (element.id == id) {
+    //             el = element
+    //         }
+    //     })
+    //     if (confirm(`¿Está seguro que quiere comprar esta ${el.nombre} por ${el.dinero} DogeCoins?`)) {
 
-protagonista()
+    //         localStorage.setItem("Protagonista", )        
+    //     }
+    // })
+    let protagonista = JSON.parse(localStorage.getItem("Protagonista"))
+    const lista = JSON.parse(localStorage.getItem("Objetos"))
+    let el
+    lista?.forEach((element) => {
+        if (element.id == id) el = element
+    })
+    if (confirm(`¿Está seguro que quiere comprar esta ${el.nombre} por ${el.dinero} DogeCoins?`)) {
+        if (protagonista.monedas < el.dinero) {
+            alert("Perdón, pero no tienes suficiente DogeCoins :'v")
+            return
+        }
+        protagonista.monedas -= el.dinero
+        switch (el.mejora.length) {
+            case 1:
+                switch (el.mejora[0]) {
+                    case "ataque":
+                        protagonista.ataque += el.cantidad
+                        break;
+                    case "defensa":
+                        protagonista.defensa += el.cantidad
+                        break;
+                    case "saludMax":
+                        protagonista.saludMax += el.cantidad
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case 3:
+                protagonista.ataque += el.cantidad
+                protagonista.defensa += el.cantidad
+                protagonista.saludMax += el.cantidad
+                break;
+        }
+        localStorage.setItem("Protagonista", JSON.stringify(protagonista))
+    }
+    Guardar()
+}
 // load json data; then proceed
-const listar = () => getJSON('../Objetos.json').then(info => {
+const listar = () => {
     // get title property and log it to the console
-    lista = []
-    lista = info  
+    lista = JSON.parse(localStorage.getItem("Objetos"))
     // console.log(lista);
     lista?.forEach((element) => {
         // console.log(element);
@@ -62,5 +90,5 @@ const listar = () => getJSON('../Objetos.json').then(info => {
         </div>
         `
     });
-})
+}
 listar()
