@@ -27,7 +27,7 @@ suerte?.addEventListener("click", () => {
                     }
                     Swal.fire(
                         '¡Se agregarán puntos :D!',
-                        `Se te agregaron ${(numero > 1) ? "puntos " : "punto "} en ${final}`,
+                        `Se te agregaron ${(numero > 1) ? numero + " puntos " : numero + " punto "} en ${final}`,
                         'success'
                     )
                     break;
@@ -48,7 +48,7 @@ suerte?.addEventListener("click", () => {
                     }
                     Swal.fire(
                         '¡Se te quitarán puntos D:!',
-                        `Se te quitaron ${(numero > 1) ? "puntos " : "punto "} en ${final}`,
+                        `Se te quitaron ${(numero > 1) ? numero + " puntos " : numero + " punto "} en ${final}`,
                         'error'
                     )
                     break;
