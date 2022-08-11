@@ -45,8 +45,25 @@ if (!localStorage.getItem("Enemigos")) {
     })
 }
 
-const vida = localStorage.getItem("Protagonista").salud
+const prota = JSON.parse(localStorage.getItem("Protagonista"))
+console.log(prota);
+const vida = prota.salud
+console.log(vida);
 if (vida <= 0) {
-    const vista = document.createElement("cheems")
-    vista.innerHTML = `src="assets/Cheems_samurai_dead.jpg" alt="Cheems samurai :D"`
+    console.log("hola mundo");
+    const vista = document.getElementById("cheems")
+    vista.src = "assets/Cheems_samurai_dead.jpg"
+    const visible = document.getElementById("visible")
+    visible.style.display = "none"
 }
+
+const estat = document.getElementById("stat")
+estat.innerHTML = `
+    <progress class="nes-progress is-primary" value="${prota.salud}" max="${prota.saludMax}"></progress>
+    <p>Descripción: ${prota.descripcion}</p>
+    <p>Salud: ${prota.salud}</p>
+    <p>Salud máxima: ${prota.saludMax}</p>
+    <p>Ataque: ${prota.ataque}</p>
+    <p>Defensa: ${prota.defensa}</p>
+    <p>DogeCoins: ${prota.monedas}</p>
+`
