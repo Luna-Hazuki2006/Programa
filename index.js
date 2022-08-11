@@ -30,6 +30,8 @@ async function getJSON(path) {
 if (!localStorage.getItem("Protagonista")) {
     getJSON("Protagonista.json").then(info => {
         localStorage.setItem("Protagonista", JSON.stringify(info[0]))
+        console.log(1);
+        console.log(JSON.parse(localStorage.getItem("Protagonista")));
     })
 }
 
@@ -45,35 +47,39 @@ if (!localStorage.getItem("Enemigos")) {
     })
 }
 
-const prota = JSON.parse(localStorage.getItem("Protagonista"))
-console.log(prota);
-const vida = prota.salud
-console.log(vida);
-if (vida <= 0) {
-    console.log("hola mundo");
-    const vista = document.getElementById("cheems")
-    vista.src = "assets/Cheems_samurai_dead.jpg"
-    const visible = document.getElementById("visible")
-    visible.style.display = "none"
+if (localStorage.getItem("Protagonista")) {
+    let prota = JSON.parse(localStorage.getItem("Protagonista"))
+    console.log(2);
+    console.log(prota);
+    const vida = prota.salud
+    console.log(vida);
+    if (vida <= 0) {
+        console.log("hola mundo");
+        const vista = document.getElementById("cheems")
+        vista.src = "assets/Cheems_samurai_dead.jpg"
+        const visible = document.getElementById("visible")
+        visible.style.display = "none"
+    }  
+    const estat = document.getElementById("stat")
+    estat.innerHTML = `
+        <progress class="nes-progress is-primary" value="${prota.salud}" max="${prota.saludMax}"></progress>
+        <p>Descripción: ${prota.descripcion}</p>
+        <p>Salud: ${prota.salud}</p>
+        <p>Salud máxima: ${prota.saludMax}</p>
+        <p>Ataque: ${prota.ataque}</p>
+        <p>Defensa: ${prota.defensa}</p>
+        <p>DogeCoins: ${prota.monedas}</p>
+` 
 }
 
 if (!localStorage.getItem("Dias")) {
     getJSON("Dias.json").then(info => {
         localStorage.setItem("Dias", JSON.stringify(info[0]))
     })
-} else {
+}
+
+const contar = () => {
     const dias = JSON.parse(localStorage.getItem("Dias"))
     dias.dia += 1
     localStorage.setItem("Dias", JSON.stringify(dias))
 }
-
-const estat = document.getElementById("stat")
-estat.innerHTML = `
-    <progress class="nes-progress is-primary" value="${prota.salud}" max="${prota.saludMax}"></progress>
-    <p>Descripción: ${prota.descripcion}</p>
-    <p>Salud: ${prota.salud}</p>
-    <p>Salud máxima: ${prota.saludMax}</p>
-    <p>Ataque: ${prota.ataque}</p>
-    <p>Defensa: ${prota.defensa}</p>
-    <p>DogeCoins: ${prota.monedas}</p>
-`
