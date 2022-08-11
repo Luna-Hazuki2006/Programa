@@ -12,6 +12,7 @@ const llenar = () => {
     <p>DogeCoins: ${protagonista.monedas}</p>
     `
 }
+llenar()
 
 const suerte = document.getElementById("suerte")
 suerte?.addEventListener("click", () => {
@@ -20,7 +21,7 @@ suerte?.addEventListener("click", () => {
 
     Swal.fire(
         '¡Entrenamiento exitoso :D!',
-        `Ganaste ${(ataque > 1) ? ataque + " puntos " : ataque + "punto "} de ataque :D, 
+        `Ganaste ${(ataque > 1) ? ataque + " puntos " : ataque + " punto "} de ataque :D, 
         pero perdiste ${salud} de salud D:`,
         'success'
     )
