@@ -1,5 +1,6 @@
 [
     {
+        "id": 0,
         "nombre": "Plei chipeado", 
         "imagen": "../assets/ps2-chip2.jpg",
         "cantidad": 2, 
@@ -7,6 +8,7 @@
         "dinero": 5
     }, 
     {
+        "id": 1, 
         "nombre": "Te de limón pero es de Jamaica pero sabe a tamarindo", 
         "imagen": "../assets/tamarindo.jpg",
         "cantidad": 2, 
@@ -14,6 +16,7 @@
         "dinero": 5
     }, 
     {
+        "id": 2,
         "nombre": "Muñeco de cartón de Bad Bunny", 
         "imagen": "../assets/conejo-malo-carton.jpg",
         "cantidad": 10, 
@@ -21,6 +24,7 @@
         "dinero": 10
     }, 
     {
+        "id": 3,
         "nombre": "Suculenta", 
         "imagen": "../assets/suculenta.jpg",
         "cantidad": 10, 
