@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Plei chipeado", 
+        "cantidad": 2, 
+        "mejora": ["ataque"], 
+        "dinero": 5
+    }, 
+    {
+        "nombre": "Te de limón pero es de Jamaica pero sabe a tamarindo", 
+        "cantidad": 2, 
+        "mejora": ["defensa"], 
+        "dinero": 5
+    }, 
+    {
+        "nombre": "Muñeco de cartón de Bad Bunny", 
+        "cantidad": 10, 
+        "mejora": ["saludMax"], 
+        "dinero": 10
+    }, 
+    {
+        "nombre": "Suculenta", 
+        "cantidad": 10, 
+        "mejora": ["ataque", "defensa", "saludMax"], 
+        "dinero": 50
+    }
+]

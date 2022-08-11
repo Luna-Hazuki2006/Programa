@@ -1,3 +1,14 @@
 [
-    
+    {
+        "nombre": "Cheems Samurai",
+        "descripcion": "El pequeño Cheems samurai se tendrá que enfrentar contra el mundo y la ansiedad",
+        "imagen": "../assets/Cheems_samurai_alive",
+        "memorial": "../assets/Cheems_samurai_dead",
+        "salud": 50,
+        "saludMax": 50,
+        "ataque": 1,
+        "defensa": 1,
+        "objetos": [],
+        "monedas": 5
+    }
 ]
