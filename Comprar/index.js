@@ -66,8 +66,9 @@ const comprar = (id) => {
                 break;
         }
         localStorage.setItem("Protagonista", JSON.stringify(protagonista))
+        console.log("gtyhf", protagonista);
+        Guardar()
     }
-    Guardar()
 }
 // load json data; then proceed
 const listar = () => {

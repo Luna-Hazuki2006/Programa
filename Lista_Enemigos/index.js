@@ -1,14 +1,9 @@
-// return json data from any file path (asynchronous)... why did I write this in english?
-async function getJSON(path) {
-    const response = await fetch(path)
-    return await response.json()
-}
 const enemigos = document.getElementById("enemigos")
 let lista = []
 
-const listar = () => getJSON("../Enemigos.json").then(info => {
+const listar = () => {
     lista = []
-    lista = info
+    lista = JSON.parse(localStorage.getItem("Enemigos"))
     lista.forEach((element) => {
         enemigos.innerHTML += `
         <div>
@@ -23,4 +18,5 @@ const listar = () => getJSON("../Enemigos.json").then(info => {
         </div>
     `
     })
-})
+}
+listar()

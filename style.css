@@ -17,3 +17,7 @@ body {
 .iconito {
     width: 30px;
 }
+
+.espacio {
+    gap: 40px;
+}

@@ -11,7 +11,42 @@
     <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
     <title>Explorar</title>
 </head>
-<body>
-    
+<body class="inicio">
+    <header>
+        <p>Aquí es donde Cheems samurai prueba su suerte ¿qué acaso no es bonito?</p>
+        <p>¡Pero no dejes que la saladés de intimide, sé que pronto tendrás buena suerte!</p>
+        <a class="nes-btn" href="../index.html">
+            <img class="iconito" src="../assets/volver.png" alt="(Vover, para buscar más dinero :D)">
+        </a>
+    </header>
+    <main>
+        <section class="nes-container with-title">
+            <h3 class="title">Estadísticas de Cheems samurai</h3>
+            <progress class="nes-progress is-primary" value="${prota.salud}" max="${prota.saludMax}"></progress>
+            <p>Salud: </p>
+            <p>Salud máxima: </p>
+            <p>Ataque: </p>
+            <p>Defensa: </p>
+            <p>DogeCoins: </p>
+        </section><br>
+        <section class="nes-container with-title" style="display: grid; grid-template-rows: 2; gap: 40px;">
+            <h3 class="title">Aquí están los tickets de la suerte :D</h3>
+            <img src="../assets/cheems_samurai_suertudo.jpg" alt="Con los tickets pa' la promo">
+            <button id="suerte" class="nes-btn">¡Prueba tu suerte :D!</button>
+        </section>
+    </main>
+    <footer>
+        <section class="icon-list">
+            <!-- controllers -->
+            <i class="nes-logo"></i>
+            <i class="nes-jp-logo"></i>
+            <i class="snes-logo"></i>
+            <i class="snes-jp-logo"></i>
+            <!-- octocat -->
+            <a href="https://github.com/Luna-Hazuki2006/Programa.git" target="_blank">
+                <i class="nes-octocat animate"></i>
+            </a>
+          </section>
+    </footer>
 </body>
 </html>
