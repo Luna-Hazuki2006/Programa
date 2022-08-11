@@ -8,7 +8,6 @@
         "saludMax": 50,
         "ataque": 1,
         "defensa": 1,
-        "objetos": [],
         "monedas": 5
     }
 ]

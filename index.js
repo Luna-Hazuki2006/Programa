@@ -25,7 +25,7 @@ const enemigos = [
 // const name = new File(arguments);
 
 const cosa = document.getElementById("enemigos")
-enemigos.forEach((element) => {
+enemigos?.forEach((element) => {
     cosa.innerHTML += `
     <div>
         <h1>${element.nombre}</h1>
@@ -39,3 +39,4 @@ enemigos.forEach((element) => {
     </div>
 `
 })
+
