@@ -13,6 +13,7 @@ suerte?.addEventListener("click", () => {
     )
     protagonista.salud -= salud
     protagonista.ataque += ataque
+    protagonista.saludMax += saludMax
     localStorage.setItem("Protagonista", JSON.stringify(protagonista))
     const estat = document.getElementById("stat")
     estat.innerHTML = `
